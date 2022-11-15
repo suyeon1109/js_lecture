@@ -1,0 +1,94 @@
+<div id="elem">
+    <div id="elem-content">Element</div>
+</div>
+
+<ul>
+    <li>1-1</li>
+    <li>1-2</li>
+</ul>
+<ul>
+    <li>2-1</li>
+    <li>2-2</li>
+</ul>
+
+<body>
+    <!-- <a href="https://www.naver.com/file.zip".....></a>
+    <a href="https://www.yahoo.co.kr">.....</a>
+    <a href="https://www.naver.com/file.zip".....></a>
+    <a href="https://www.naver.com/file.zip".....></a>
+    <a href="https://www.naver.com/file.zip".....></a>
+    <a href="https://www.naver.com/file.zip".....></a>
+    <a href="https://www.naver.com/file.zip".....></a>
+
+    <h1>목차</h1>
+
+    <div class="contents">
+        <ul class="book">
+            <li class="chapter">Chapter 1</li>
+            <li class="chapter">Chapter 2</li>
+        </ul>
+    </div> -->
+
+    <table id="tbl">
+        <tr>
+            <td>나이: </td>
+            <td>
+                <label>
+                    <input type="radio" name="age" value="young" checked> 18세 미만
+                </label>
+                <label>
+                    <input type="radio" name="age" value="young" checked> 18세 이상, 60세 미만
+                </label>
+                <label>
+                    <input type="radio" name="age" value="young" checked> 60세 미만
+                </label>
+            </td>
+        </tr>
+    </table>
+</body>
+
+
+<script>
+    // let elem=5;
+    // // 위 element 요소를 얻을 수 있는 코드 작성
+    // let x = document.getElementById('elem');
+    // cosole.log(x); //print 같은. 브라우저에 뜸
+    // x.style.background= 'red';
+
+    // alert(elem); 
+
+    // or 
+    // elem.style.background= 'red'; <-- 실무에서 쓰면 욕 엄청 먹음
+
+    //--------------
+
+    // let elements = document.querySelectorAll('ul > li:last-child');
+    // // alert(elements[0]);
+
+    // for (let elem of elements) {
+    //     alert(elem.innerHTML);
+    // }
+
+    //--------------
+
+    // for (let elem of document.body.children) {
+    //     if (elem.matches('a[href$="zip"')) {
+    //         alert("주어진 CSS 셀렉터와 일치하는 요소: " + elem.href);
+    //     }
+    // }
+
+    //--------------
+
+    // let chapter = document.querySelector('.chapter'); //li
+    // alert(chapter.closest('.book')); // ul
+    // alert(chapter.closest('.contents')); // div
+    // alert(chapter.closest('.h1')); // null
+
+    //--------------
+
+    let inputs = table.getElementsByTagName('input');
+
+    for (let input of inputs) {
+        alert(input.value + ': ' + input.checked);
+    }
+</script>
