@@ -15,7 +15,10 @@
         //         onMouseEnter: () => console.log("mouse enter")}, 
         //     "Hello, I'm a span"
         //     );
-        const Title = <h3 id="title" onMouseEnter={() => console.log("im clicked")}>Hello I'm a title</h3>
+        const Title = () => (
+            <h3 id="title" onMouseEnter={() => console.log("im clicked")}>Hello I'm a title</h3>
+        );
+        
         const btn = React.createElement(
             "button", 
             {
