@@ -7,6 +7,18 @@
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
+        function App() {
+            const [counter, setCounter] = React.useState(0);
+            const onClick = () => {
+                setCounter(counter+1)
+            };
+            return (
+                <div>
+                    <h3>Total clicks: {counter}</h3>
+                    <button onClick={onClick={onClick}}>Click me</button>
+                </div>
+            )
+        }
         const root = document.getElementsById("root");
         // const h3 = React.createElement(
         //     "h3", 
@@ -41,20 +53,20 @@
         // first letter of component must be upper case letter
         // <~~/> : for function 
 
-
-        const Container = () => (
-            <div>
-                <h3>
-                    Total clicks: 0
-                </h3>
-                <button onClick={() => console.log("i'm clicked")}>
-                    Click me
-                </button>
-            </div>
-        )
+        // const Container = () => (
+        //     <div>
+        //         <h3>
+        //             Total clicks: 0
+        //         </h3>
+        //         <button onClick={() => console.log("i'm clicked")}>
+        //             Click me
+        //         </button>
+        //     </div>
+        // )
 
 
         // ReactDOM.render(span, root) // show it to the user
-        ReactDOM.render(container, root)
+        // ReactDOM.render(container, root)
+        ReactDOM.render(<App />,root);
     </script>
 </html>
